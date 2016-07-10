@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SQuizze</string>
+    <string name="login">Faça seu Login</string>
+    <string name="activity_dashboard_label">Escolha o Quiz</string>
 </resources>
