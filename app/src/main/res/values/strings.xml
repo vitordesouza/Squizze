@@ -2,4 +2,9 @@
     <string name="app_name">SQuizze</string>
     <string name="login">Faça seu Login</string>
     <string name="activity_dashboard_label">Escolha o Quiz</string>
+    <string name="quiz_name">Quiz Um</string>
+    <string name="question_count">50</string>
+    <string name="best_result">Melhor Resultado:</string>
+    <string name="last_result">Último Resultado:</string>
+    <string name="question_count_label">Questões</string>
 </resources>

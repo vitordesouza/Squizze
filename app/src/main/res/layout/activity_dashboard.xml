@@ -18,12 +18,103 @@
             android:gravity="center"
             android:layout_height="wrap_content"
             android:text="@string/activity_dashboard_label"
-            android:textSize="23sp"
+            android:textSize="@dimen/activity_title"
             android:textStyle="bold"
-            android:textColor="@color/blue"
+            android:textColor="@color/activity_title"
             android:textAlignment="center" />
     </android.support.v7.widget.Toolbar>
 
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card-quiz"
+        ></android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quiz_name"
+                android:id="@+id/quiz_name"
+                android:textSize="@dimen/title_one"
+                android:textStyle="bold"
+                android:textColor="@color/title_color"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/best_result_label"
+                    android:text="@string/best_result"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/best_result"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/last_result_label"
+                    android:text="@string/last_result"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/last_result"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="match_parent"
+                android:text="@string/question_count"
+                android:textSize="@dimen/title_one"
+                android:textStyle="bold"
+                android:textColor="@color/title_color"
+                />
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/question_count_label"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 
 </LinearLayout>
