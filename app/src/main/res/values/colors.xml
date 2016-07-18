@@ -5,5 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="activity_title">#000dc2</color>
     <color name="title_color">#f00</color>
-    <color name="background_default">#dedede</color>
+    <color name="background_default">#e9e9e9</color>
 </resources>
