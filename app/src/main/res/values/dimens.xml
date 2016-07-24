@@ -4,5 +4,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="title_one">18dp</dimen>
     <dimen name="activity_title">30sp</dimen>
+    <dimen name="layout_width_question_count">56dp</dimen>
+    <dimen name="label_count">24dp</dimen>
 
 </resources>
