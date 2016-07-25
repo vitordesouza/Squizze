@@ -5,5 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="activity_title">#000dc2</color>
     <color name="title_color">#f00</color>
-    <color name="background_default">#e9e9e9</color>
+    <color name="background_default">#da363636</color>
+    <color name="accent_color">#fff</color>
+    <color name="color_category_textview_overlay">#ef6400</color>
+    <color name="toolbar_background">#1d1d1d</color>
 </resources>
