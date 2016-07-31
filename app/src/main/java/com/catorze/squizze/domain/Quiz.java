@@ -11,6 +11,7 @@ public class Quiz {
     private float price;
     private int lastResult;
     private int bestResult;
+    private int questionCount;
 
     public void setName(String name) {
         this.name = name;
@@ -50,5 +51,11 @@ public class Quiz {
 
     public int getBestResult() {
         return bestResult;
+    }
+
+    public int getQuestionCount() { return questionCount; }
+
+    public void setQuestionCount(int questionCount) {
+        this.questionCount = questionCount;
     }
 }

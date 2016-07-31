@@ -11,15 +11,24 @@ public class Category {
     private List<Quiz> quizzes;
     private String thumbnail;
     private int photo;
+    private Requirement requirements;
 
     public Category() {
+
+    }
+
+    public Requirement getRequirements() {
+        return requirements;
+    }
+
+    public void setRequirements(Requirement requirements) {
+        this.requirements = requirements;
     }
 
     public Category(String categoryName, int photo) {
         this.name = categoryName;
         this.photo = photo;
     }
-
 
     public List<Quiz> getQuizzes() {
         return quizzes;
@@ -51,5 +60,30 @@ public class Category {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    private class Requirement {
+        private List<String> itens;
+        private List<String> categories;
+
+        public Requirement(){
+
+        }
+
+        public List<String> getCategories() {
+            return categories;
+        }
+
+        public void setCategories(List<String> categories) {
+            this.categories = categories;
+        }
+
+        public List<String> getItens() {
+            return itens;
+        }
+
+        public void setItens(List<String> itens) {
+            this.itens = itens;
+        }
     }
 }

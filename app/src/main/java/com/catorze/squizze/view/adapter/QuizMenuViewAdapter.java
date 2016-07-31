@@ -36,7 +36,7 @@ public class QuizMenuViewAdapter extends RecyclerView.Adapter<QuizMenuViewAdapte
     public void onBindViewHolder(QuizMenuViewHolder holder, int position) {
         Quiz quiz = quizzes.get(position);
         holder.txtName.setText(quiz.getName());
-        holder.txtCount.setText(String.valueOf(quiz.getQuestions().size()));
+        holder.txtCount.setText(String.valueOf(quiz.getQuestionCount()));
         holder.txtLastResult.setText(MessageFormat.format("{0}%", quiz.getLastResult()));
         holder.txtBestResult.setText(MessageFormat.format("{0}%", quiz.getBestResult()));
     }
