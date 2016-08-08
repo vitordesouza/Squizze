@@ -22,6 +22,7 @@ public class CategoryRestService extends AbstractRestService {
     private Context mContext;
 
     public CategoryRestService(Context mContext) {
+        super(mContext);
         this.mContext = mContext;
     }
 

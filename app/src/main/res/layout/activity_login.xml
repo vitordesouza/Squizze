@@ -20,23 +20,61 @@
         android:src="@drawable/logo"
         app:civ_border_width="2dp"
         app:civ_border_color="#FF000000"/>
-
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="@string/login"
         />
-
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/user"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:autoText="false"
+        android:hint="Usuário"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        android:id="@+id/pass"/>
+        android:inputType="textPassword"
+        android:id="@+id/pass"
+        android:hint="Senha"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginbtn"
+            android:onClick="login"
+            android:text="Login"
+            />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="match_parent" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signupbtn"
+            android:onClick="signup"
+            android:text="Sign Up"/>    
+    </LinearLayout>
+    
 
 </LinearLayout>

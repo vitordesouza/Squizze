@@ -1,5 +1,8 @@
 package com.catorze.squizze.rest;
 
+import android.content.Context;
+
+import com.catorze.squizze.domain.SharedPrefs;
 import com.catorze.squizze.rest.exception.HttpRestException;
 
 import java.io.IOException;
@@ -18,9 +21,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class AbstractRestService {
 
     private static final String BASE_URL = "http://192.168.1.42:3000/";
+    private static final String HEADER_KEY_TOKEN = "APP-TOKEN";
     //    private static final String BASE_URL = "http://www.mocky.io/v2/";
     private Retrofit retrofit;
+    private SharedPrefs prefs;
+    private Context mContext;
 
+
+    public AbstractRestService(Context mContext) {
+        this.mContext = mContext;
+        this.prefs = new SharedPrefs(mContext);
+    }
 
     public Object initializeRestService(Class clazz) {
 
@@ -37,6 +48,21 @@ public class AbstractRestService {
             }
         });
 
+
+        client.networkInterceptors().add(new Interceptor() {
+            @Override
+            public Response intercept(Chain chain) throws IOException {
+                String token = prefs.getToken();
+
+                Request request = chain.request().newBuilder()
+                        .header(HEADER_KEY_TOKEN, token)
+                        .build();
+                return chain.proceed(request);
+            }
+        });
+
+
+
         retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -46,8 +72,9 @@ public class AbstractRestService {
         return retrofit.create(clazz);
     }
 
-    public interface OnResponse<T>{
+    public interface OnResponse<T> {
         void success(T t);
+
         void error(HttpRestException restException);
     }
 }
